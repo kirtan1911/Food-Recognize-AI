@@ -1,0 +1,108 @@
+{
+  "theme": "LIGHT",
+  "archetype": "Archetype 1: Organic & Earthy",
+  "domain": "Health, Nutrition, Food Tracking AI SaaS",
+  "emotions": ["Calm", "Frictionless", "Trust", "Grounded", "Mindful"],
+  "design_philosophy": "Frictionless journaling. Move away from clinical 'medical' tracking towards an organic, supportive daily companion. Use 'Day-Grid' visual feedback, soft organic shapes, and warm tones to remove the guilt spiral of traditional tracking.",
+  "colors": {
+    "background": "#FDFBF7",
+    "surface": "#FFFFFF",
+    "primary": "#2C4C3B",
+    "secondary": "#D96C4A",
+    "accent": "#8DAA91",
+    "text_main": "#1A2F24",
+    "text_muted": "#5C7365",
+    "border": "#E8EAE6",
+    "success": "#4CAF50",
+    "warning": "#FF9800",
+    "danger": "#F44336",
+    "charts": {
+      "protein": "#D96C4A",
+      "carbs": "#E6B87A",
+      "fat": "#8DAA91",
+      "calories": "#2C4C3B"
+    }
+  },
+  "typography": {
+    "headings_font": "Outfit",
+    "body_font": "Manrope",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl tracking-tight leading-none",
+      "h2": "text-2xl sm:text-3xl tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl tracking-tight",
+      "h4": "text-lg sm:text-xl",
+      "body": "text-base leading-relaxed",
+      "small_label": "text-xs tracking-[0.2em] uppercase font-semibold text-text_muted"
+    },
+    "rules": [
+      "No Inter or generic sans for headings.",
+      "Never center align dense data or paragraphs.",
+      "Use tracking-tight for all headings over 32px."
+    ]
+  },
+  "layout_spacing": {
+    "philosophy": "Generous Spacing Philosophy. Use 2-3x more spacing than typical designs to create breathing room.",
+    "container_padding": "p-6 md:p-8",
+    "bento_grid": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6. Use this for the Dashboard. Summary (col-span-1), Main Chart (col-span-2 row-span-2).",
+    "border_radius": "rounded-3xl for main containers (cards, modals), rounded-2xl for inner widgets/images. Avoid sharp edges to maintain the 'soft' archetype."
+  },
+  "components": {
+    "cards": {
+      "style": "Flat background (Bone White #FFFFFF), 1px solid border (#E8EAE6), soft shadow-sm. Organic, cardless feel.",
+      "hover": "Slight lift (-translate-y-1), subtle shadow-md, border color darkens slightly."
+    },
+    "buttons": {
+      "primary": "bg-primary text-white rounded-full px-6 py-3 font-medium transition-transform hover:-translate-y-1 hover:shadow-lg",
+      "secondary": "bg-transparent text-text_main border border-border rounded-full px-6 py-3 font-medium hover:bg-background"
+    },
+    "inputs_forms": {
+      "style": "Shadcn inputs heavily customized. bg-white, rounded-2xl, border-border, px-4 py-3. Focus state MUST be ring-2 ring-accent border-transparent."
+    },
+    "food_recognition_card": {
+      "style": "Image on top (rounded-t-3xl max-h-[40vh] object-cover), content below with bento-style macro breakdowns inside. High visual impact."
+    },
+    "charts": {
+      "style": "Use smooth, curved lines (monotone) for line charts. Use rounded corners for bar charts. Avoid sharp, aggressive geometric data viz."
+    }
+  },
+  "animations": {
+    "interactions": "Smooth 0.2s ease for hover states. Focus states must clearly elevate.",
+    "page_transitions": "Framer motion staggered fade-up for dashboard widgets and timeline items. Delay children by 0.1s."
+  },
+  "media": {
+    "image_urls": {
+      "onboarding_hero": {
+        "url": "https://images.pexels.com/photos/4519049/pexels-photo-4519049.jpeg",
+        "description": "Healthy salad setup for login/register hero background."
+      },
+      "food_sample_1": {
+        "url": "https://images.pexels.com/photos/32810338/pexels-photo-32810338.jpeg",
+        "description": "Sample recognized food image (Salad Bowl)."
+      },
+      "food_sample_2": {
+        "url": "https://images.pexels.com/photos/4451863/pexels-photo-4451863.jpeg",
+        "description": "Sample recognized food image (Avocado Toast)."
+      },
+      "user_avatar": {
+        "url": "https://images.pexels.com/photos/3756512/pexels-photo-3756512.jpeg",
+        "description": "Placeholder for user profile picture."
+      }
+    }
+  },
+  "icons": {
+    "library": "@phosphor-icons/react",
+    "installation": "yarn add @phosphor-icons/react",
+    "style": "Duotone or Regular weight. Consistent sizing (w-6 h-6 for standard, w-8 h-8 for section headers)."
+  },
+  "testing": {
+    "rules": "All interactive and key informational elements MUST include a 'data-testid' attribute in kebab-case, role-based. e.g., 'data-testid=\"login-submit-button\"', 'data-testid=\"upload-food-image\"'."
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Adhere to the Organic & Earthy color palette. Do NOT use default Tailwind blue, slate, or gray. Tint greys with warm sand.",
+    "CRITICAL: Apply 'data-testid' to EVERY button, link, form input, tab, and major data visualization.",
+    "For the food scanning (upload/webcam) flow, prioritize a frictionless, modal-based or distinct center-stage UI that feels 'magical' when the AI returns the breakdown.",
+    "For Meal History, construct a 'Day-Grid' vertical timeline instead of a sterile table.",
+    "Install fonts via Google Fonts in index.css (@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap');).",
+    "Ensure the dashboard uses standard HTML/Tailwind grids for layout wrapping Shadcn customized components."
+  ]
+}

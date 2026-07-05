@@ -1,0 +1,40 @@
+# Environment files
+.env
+*.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Node / React
+node_modules/
+build/
+dist/
+.npm/
+yarn-error.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test reports / memory (sensitive or large)
+memory/
+test_report/
+
+# Misc
+*.sqlite3
